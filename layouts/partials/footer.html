@@ -1,0 +1,35 @@
+<div class="footer banner banner-accent-3">
+	<div class="banner-content">
+		<div class="columns">
+			<div>
+				<div class="footer-logo">
+					<a href="/">
+						<img class="footer-logo-image" src="/favicon.png"/>
+					</a>
+				</div>
+
+				{{ if .Site.Data.social.links }}
+				<div class="footer-social">
+					{{ range .Site.Data.social.links }}
+					<span class="social-icon social-icon-{{ .name | urlize }}">
+						<a href="{{ .url }}" title="{{ .name }}" target="_blank" rel="noopener">
+							<img src="{{ .image | relURL }}" width="30" height="30" alt="{{ .name }}"/>
+							<span>{{ .name }}</span>
+						</a>
+					</span>
+					{{ end }}
+				</div>
+				{{ end }}
+			</div>
+
+			{{ if .Site.Data.legal }}
+			<div class="footer-legal">
+				<p>Copyright &copy; <strong>{{ .Site.Data.legal.name }}</strong></p>
+				<p><a href="{{ .Site.Data.legal.address_link }}" rel="noopener" target="legal_address">{{ .Site.Data.legal.address }}</a></p>
+				<p><a href="mailto:{{ .Site.Data.legal.email }}" rel="noopener">{{ .Site.Data.legal.email }}</a></p>
+				<p>P.IVA: <code>{{ .Site.Data.legal.p_iva }}</code></p>
+			</div>
+			{{ end }}
+		</div>
+	</div>
+  </div>

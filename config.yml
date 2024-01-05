@@ -1,0 +1,62 @@
+# Core
+baseURL: /
+languageCode: it-IT
+theme: Winston
+
+module:
+  hugoVersion:
+    extended: true
+    min: 0.55.0
+
+# Content
+paginate: 3
+pygmentsCodeFences: true
+pygmentsCodefencesGuessSyntax: true
+pygmentsUseClasses: true
+
+# menu:
+#   main:
+#     - identifier: contact
+#       name: Contact
+#       url: /contact
+#       weight: 1
+
+# Config
+title: Jongo SRLs
+params:
+  logo: /branding/logo.svg
+  google_analytics_id: ''
+  #twitter_handle: '@jongosrls'
+  showAuthorOnHomepage: false
+  showAuthorOnPosts: false
+  showIntroContentOnHomepage: true
+  showPostsOnHomepage: false
+  usePaginationOnHomepage: false
+  limitPostsOnHomepage: 3
+  sortPostsByDateOldestFirst: false
+  addDot: true
+  addFrame: true
+
+  # ———— Colors ———— #
+  highlightColor: '#7b16ff'
+  baseColor: '#000'
+  baseOffsetColor: '#111'
+  headingColor: '#ffffff'
+  textColor: '#ffffff'
+  dotColor: '#ffbb00'
+  # ———————————————— #
+
+  # ———— Fonts ———— #
+  enableGoogleFonts: true
+  googleFontsUrl: 'https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap'
+  fontFamilyHeading: Poppins
+  fontFamilyParagraph: Helvetica
+  fontFamilyMonospace: monospace
+  # ———————————————— #
+
+markup:
+  goldmark:
+    renderer:
+      hardWraps: false
+      unsafe: true
+      xhtml: false
